@@ -12,8 +12,8 @@ def pandigit(num):
 output = []
 product = []
 
-for i in range(1,100000):
-    for j in range(1,100000):
+for i in range(1,10000):
+    for j in range(1,1000):
         if pandigit(str(i*j)+str(i)+str(j)) != False:
             output.append(str(i*j)+str(i)+str(j))
             product.append(str(i*j))
@@ -24,7 +24,8 @@ indexes = [product.index(x) for x in set(product)]
 unique = []
 
 for i in indexes:
-    unique.append(str(output[i]))
+    unique.append(str(product[i]))
+    
 
 x=list(map(int, unique))
 print(sum(x))
